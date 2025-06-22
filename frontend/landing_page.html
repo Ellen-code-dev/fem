@@ -1,26 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FemTrack AI | Welcome</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FemTrack AI - Smarter Cervical Care</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="left-side">
-      <h1>FemTrack AI</h1>
-      <p class="tagline">Smarter Cervical Care with AI</p>
+    <!-- 🔹 NAVIGATION BAR -->
+<header>
+  <div class="navbar">
+    <div class="logo">FemTrack <span>AI</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-      <div class="buttons">
-        <a href="signup.html" class="btn patient">Sign up as Patient</a>
-        <a href="signup.html" class="btn doctor">Sign up as Doctor</a>
-        <a href="signup.html" class="btn login">Login</a>
-      </div>
+<style>
+  header {
+    background: #fbe9f5;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b04bae;
+  }
+
+  .logo span {
+    color: #da70d6;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    color: #b04bae;
+  }
+</style>
+  <div class="landing-container">
+    
+    <!-- LEFT SIDE -->
+    <div class="left-section">
+      <h1 class="logo">FemTrack <span>AI</span></h1>
+      
+      <img src="frontend/i_need_a_circular_logo_for_femtrack (1).jpeg" alt="FemTrack AI Logo" class="logo-image" />
+      <p class="tagline">Smarter Cervical Care for Women</p>
+      <p class="description">
+        Early detection. Personalized screening. Doctor-guided care.<br>
+        FemTrack AI puts women’s wellness first — powered by smart technology.
+      </p>
+
+    <div class="buttons">
+  <a href="signup.html" class="btn primary">Sign Up as Patient</a>
+  <a href="signup_doctor.html" class="btn outline">Sign Up as Doctor</a>
+  <a href="login.html" class="btn ghost">Login</a>
+</div>
     </div>
 
-    <div class="right-side">
-      <img src="https://undraw.co/api/illustrations/undraw_doctor_kw5l.svg" alt="Health illustration">
+    <!-- RIGHT SIDE -->
+    <div class="right-section">
+      <img src="a_digital_illustration_of_an_african_or.jpeg" alt="FemTech Illustration" />
     </div>
   </div>
+  <!-- 🔻 FOOTER -->
+<footer>
+  <div class="footer-content">
+    <p>© 2025 FemTrack AI. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #f3d6f0;
+    padding: 20px 30px;
+    margin-top: 50px;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-links li a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .footer-links li a:hover {
+    color: #b04bae;
+  }
+</style>
 </body>
-</html
+</html>

@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #f4d2ec;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  font-size: 1.8rem;
+  color: #8e44ad;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 40px;
+  background-color: #fdfaff;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #f2e4fa;
+  padding: 15px;
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card.high { background-color: #ffdde0; }
+.card.moderate { background-color: #fff0d0; }
+.card.low { background-color: #e0ffe0; }
+.card.alert { background-color: #ffd6e7; }
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+
+.table-section th, .table-section td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-section .high {
+  color: red;
+  font-weight: bold;
+}
+
+.table-section .moderate {
+  color: orange;
+  font-weight: bold;
+}
+
+.table-section .low {
+  color: green;
+  font-weight: bold;
+}
+
+button {
+  background-color: #a15fc6;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: #444;
+}
+.sidebar ul li a:hover {
+  color: #8e44ad;
+}
