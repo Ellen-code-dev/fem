@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FemTrack AI Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffeaf5;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .app-wrapper {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .sidebar {
+      background: linear-gradient(to bottom, #c445a0, #9337b0);
+      width: 260px;
+      padding: 30px 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .sidebar-header h2 {
+      font-size: 20px;
+      margin: 0;
+    }
+    .sidebar-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .nav-item i {
+      width: 20px;
+    }
+    .nav-item:hover {
+      background-color: #fdd3e8;
+      color: #700b74;
+    }
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 40px;
+      background: #fff0f7;
+    }
+    .section {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      color: #6b1f6e;
+      margin-bottom: 20px;
+    }
+    .dashboard-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      padding: 20px;
+      background: #ffeaf5;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #6b1f6e;
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+    }
+    .risk-red { background: #ffcccc; }
+    .risk-yellow { background: #fff8b3; }
+    .risk-green { background: #caffd4; }
+  </style>
+</head>
+<body>
+  <div class="app-wrapper">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>FemTrack AI</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/5231/5231019.png" alt="Avatar">
+      </div>
+      <div class="nav-item"><i class="fas fa-chart-line"></i> Dashboard</div>
+      <div class="nav-item"><i class="fas fa-calendar-check"></i> Appointments</div>
+      <div class="nav-item"><i class="fas fa-boxes"></i> Inventory</div>
+      <div class="nav-item"><i class="fas fa-coins"></i> Cost Estimator</div>
+      <div class="nav-item"><i class="fas fa-cogs"></i> Admin</div>
+    </div>
+
+    <div class="main">
+      <div class="section">
+        <h2>Interactive Screening Scheduler</h2>
+        <p>Select available time slots for screenings. (Calendar UI placeholder)</p>
+      </div>
+
+      <div class="section">
+        <h2>Patient Portal</h2>
+        <div class="dashboard-cards">
+          <div class="card">
+            <h4>Risk Report</h4>
+            <p>Downloadable PDF with plain-language explanation</p>
+          </div>
+          <div class="card">
+            <h4>Screening History</h4>
+            <p>Past appointments and reminders</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Analytics & Optimization</h2>
+        <div class="dashboard-cards">
+          <div class="card">
+            <h4>Inventory Forecast</h4>
+            <p>Predict depletion based on usage (ARIMA model)</p>
+          </div>
+          <div class="card">
+            <h4>Load Balancing</h4>
+            <p>Suggest routing based on clinic capacity</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Integration & Security</h2>
+        <div class="dashboard-cards">
+          <div class="card">
+            <h4>EHR Sync</h4>
+            <p>FHIR API mock connection available</p>
+          </div>
+          <div class="card">
+            <h4>Payment Gateways</h4>
+            <p>Stripe, PayPal, Grant API demo</p>
+          </div>
+          <div class="card">
+            <h4>Security & Compliance</h4>
+            <p>HIPAA/GDPR rules, OAuth 2.0 auth</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Patient Risk Visualization</h2>
+        <div class="dashboard-cards">
+          <div class="card risk-red">
+            <h4>High Risk</h4>
+            <p>Patients needing immediate follow-up</p>
+          </div>
+          <div class="card risk-yellow">
+            <h4>Medium Risk</h4>
+            <p>Monitor regularly, schedule screenings</p>
+          </div>
+          <div class="card risk-green">
+            <h4>Low Risk</h4>
+            <p>Routine check-up suggested</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Clinical Decision Support</h2>
+        <div class="dashboard-cards">
+          <div class="card">
+            <h4>Recommended Tests</h4>
+            <p>Pap smear, HPV test, colposcopy</p>
+          </div>
+          <div class="card">
+            <h4>Action Items</h4>
+            <p>Notify 3 patients overdue for screening</p>
+          </div>
+          <div class="card">
+            <h4>Resource Availability</h4>
+            <p>5 colposcopes, 10 HPV kits in stock</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Patient Communication Portal</h2>
+        <p>Secure messaging system coming soon...</p>
+      </div>
+
+      <div class="section">
+        <h2>Cost Transparency</h2>
+        <div class="dashboard-cards">
+          <div class="card">
+            <h4>Procedure Costs</h4>
+            <p>Pap smear - KES 1,200<br>Colposcopy - KES 3,500</p>
+          </div>
+          <div class="card">
+            <h4>Financing Options</h4>
+            <p>Women’s Health Grant, PayLater</p>
+          </div>
+          <div class="card">
+            <h4>Reminders</h4>
+            <p>4 patients notified today</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Admin Controls</h2>
+        <div class="dashboard-cards">
+          <div class="card">
+            <h4>Inventory Console</h4>
+            <p>Track & reorder test kits and supplies</p>
+          </div>
+          <div class="card">
+            <h4>User Permissions</h4>
+            <p>Role-based access for staff</p>
+          </div>
+          <div class="card">
+            <h4>Audit Logs</h4>
+            <p>Activity records available for review</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
