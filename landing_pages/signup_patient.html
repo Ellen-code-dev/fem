@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Sign Up - FemTrack AI</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fdf3f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      color: #b04bae;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      background: #da70d6;
+      border: none;
+      padding: 12px;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b04bae;
+    }
+  </style>
+</head>
+<body>
+  <form action="/signup-patient" method="POST">
+    <h2>Patient Registration</h2>
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="password" name="password" placeholder="Create Password" required>
+    <button type="submit">Sign Up</button>
+  </form>
+</body>
+</html>

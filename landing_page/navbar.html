@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FemTrack AI Navbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Navbar container */
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    header {
+      background: #fbe9f5;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo Section */
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      width: 100px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #b04bae;
+    }
+
+    .logo-text span {
+      color: #da70d6;
+    }
+
+    /* Navigation Links */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #b04bae;
+    }
+
+    /* Auth link styling */
+    .auth-links span {
+      margin: 0 8px;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🔹 NAVIGATION BAR -->
+  <header>
+    <div class="navbar">
+      <!-- LOGO with image + text -->
+      <div class="logo-section">
+        <img src="i_need_a_circular_logo_for_femtrack__1_-removebg-preview.png" alt="FemTrack AI Logo" class="logo-img" />
+        <span class="logo-text">FemTrack <span>AI</span></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <!--<li><a href="#">About</a></li>-->
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="auth-links">
+            <a href="login.html">Login</a>
+            <span>|</span>
+            <a href="signup.html">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</body>
+</html>

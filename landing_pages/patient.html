@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FemTrack AI - Patient Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #fef9fc;
+    }
+
+    aside {
+      margin-right: 30px;
+      width: 290px;
+      background-color: #f8d9f2;
+      padding: 30px;
+      box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    aside h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 24px;
+      color: #a00086;
+      margin-top: 20px;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside ul li {
+      margin: 20px 0;
+      font-weight: 600;
+      color: #444;
+      cursor: pointer;
+      margin-right: 60px;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      display: flex;
+      gap: 30px;
+      flex-grow: 1;
+    }
+
+    .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+      color: #333;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .yellow {
+      background-color: #fff9d6;
+    }
+
+    .blue {
+      background-color: #d9f0ff;
+    }
+
+    .lavender {
+      background-color: #f3e8ff;
+    }
+
+    .purple {
+      background-color: #f3d9f8;
+    }
+
+    .card h3 {
+      color: #a00086;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .card p, .card ul {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: #d12c9d;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #a00086;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* 👤 Avatar Panel */
+    .profile-panel {
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    .avatar-card {
+      background-color: #ffeef8;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .avatar-card img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .avatar-card h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #a00086;
+    }
+
+    .avatar-card p {
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h2>FemTrack AI</h2>
+    <ul>
+      <li>🏠 Dashboard</li>
+      <li>📋 My Risk Report</li>
+      <li>📅 Schedule Screening</li>
+      <li>💸 My Costs</li>
+      <li>🕒 Appointments</li>
+      <li>🚪 Logout</li>
+    </ul>
+  </aside>
+
+  <main>
+    <h1>Welcome, Grace Otieno</h1>
+    <div class="content">
+      <div class="column">
+        <div class="card yellow">
+          <h3>📋 Personalized Risk Report</h3>
+          <p>You are currently classified as <strong>Low Risk</strong>. This means your recent screenings show no immediate signs of concern. However, regular check-ups are advised every 12 months.</p>
+        </div>
+
+        <div class="card blue">
+          <h3>🕒 Appointment History</h3>
+          <ul>
+            <li>✅ 10 May 2025 - Pap Smear</li>
+            <li>✅ 25 April 2025 - HPV Screening</li>
+          </ul>
+          <p><strong>Next Reminder:</strong> 26 June 2025</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card lavender">
+          <h3>📅 Schedule Your Next Screening</h3>
+          <p>Select your preferred date and time for the next screening session.</p>
+          <button class="btn">Schedule Now</button>
+        </div>
+
+        <div class="card purple">
+          <h3>💸 Cost Transparency</h3>
+          <p><strong>Pap Smear:</strong> KES 2,000 <br />
+             <strong>HPV Test:</strong> KES 3,500 <br />
+             <strong>Consultation:</strong> KES 1,000</p>
+          <p><strong>Financing Options:</strong> NHIF, CareCredit, Installments Available</p>
+        </div>
+      </div>
+<div class="profile-panel">
+  <div class="avatar-card">
+<img src="https://cdn-icons-png.flaticon.com/512/847/847969.png
+
+" alt="Afro Avatar" width="100" />
+    <h2>Grace Otieno</h2>
+    <p>Patient ID: #FT-2047</p>
+    <p>Last Visit: 10 May 2025</p>
+    <button class="btn">Edit Profile</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

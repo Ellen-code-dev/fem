@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - FemTrack AI</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #fbe9f5, #fce4ec);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #b04bae;
+      margin-bottom: 25px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #da70d6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #b04bae;
+    }
+
+    .extra-links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .extra-links a {
+      color: #b04bae;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back to FemTrack AI</h2>
+    <form id="loginForm">
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <!-- Add this dropdown -->
+      <select name="role" id="userRole" required>
+        <option value="" disabled selected>Select your role</option>
+        <option value="doctor">I am a Doctor</option>
+        <option value="patient">I am a Patient</option>
+      </select>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="extra-links">
+      <p>Don’t have an account? <a href="signup_choice.html">Sign Up</a></p>
+    </div>
+  </div>
+
+  <!-- JavaScript for redirecting after login -->
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Stop form from actually submitting
+
+      const role = document.getElementById("userRole").value;
+
+      if (role === "doctor") {
+        window.location.href = "doctor.html";
+      } else if (role === "patient") {
+        window.location.href = "patient.html";
+      } else {
+        alert("Please select a role.");
+      }
+    });
+  </script>
+</body>
+</html>

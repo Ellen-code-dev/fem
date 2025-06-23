@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FemTrack AI - Doctor Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2 class="logo">FemTrack AI</h2>
+    <ul>
+  <li><a href="index.html">🏠 Dashboard</a></li>
+  <li><a href="#">👥 Patients</a></li>
+  <li><a href="review.html">🧾 Assessment Review</a></li>
+  <li><a href="new-assessment.html">➕ New Assessment</a></li>
+  <li><a href="#">📦 Inventory</a></li>
+  <li><a href="estimate.html">💰 Cost Estimator</a></li>
+  <li><a href="#">📤 Reports</a></li>
+  <li><a href="#">🚪 Logout</a></li>
+</ul>
+  </div>
+
+  <!-- Main Dashboard -->
+  <div class="main-content">
+    <header>
+      <h1>Welcome, Dr. Ellen</h1>
+      <p>You have <strong>3 high-risk patients</strong> requiring urgent attention</p>
+    </header>
+
+    <!-- Dashboard Cards -->
+    <section class="cards">
+      <div class="card">Total Patients: 124</div>
+      <div class="card high">High Risk: 8</div>
+      <div class="card moderate">Moderate Risk: 25</div>
+      <div class="card low">Low Risk: 91</div>
+      <div class="card alert">Pending Assessments: 6</div>
+    </section>
+
+    <!-- Patient Table -->
+    <section class="table-section">
+      <h2>Patient Assessments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Risk Level</th>
+            <th>Last Assessment</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jane Mwangi</td>
+            <td>jane@example.com</td>
+            <td class="high">High 🔴</td>
+            <td>10 June 2025</td>
+            <td><button>View</button></td>
+          </tr>
+          <tr>
+            <td>Amina Yusuf</td>
+            <td>amina@care.org</td>
+            <td class="moderate">Moderate 🟠</td>
+            <td>07 June 2025</td>
+            <td><button>View</button></td>
+          </tr>
+          <tr>
+            <td>Grace Otieno</td>
+            <td>grace@clinic.co.ke</td>
+            <td class="low">Low 🟢</td>
+            <td>05 June 2025</td>
+            <td><button>View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>

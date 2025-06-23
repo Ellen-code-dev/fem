@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FemTrack AI - Hero Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background-color: #fff0f6;
+      color: #333;
+    }
+
+    .hero-section {
+      padding: 80px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 550px;
+    }
+
+    .hero-text h1 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #a2358d;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn.primary {
+      background-color: #a2358d;
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background-color: #861d72;
+    }
+
+    .btn.outline {
+      border: 2px solid #a2358d;
+      color: #a2358d;
+    }
+
+    .btn.outline:hover {
+      background-color: #fbe6f2;
+    }
+
+    .btn.ghost {
+      color: #555;
+      background-color: transparent;
+      border: none;
+    }
+
+    .btn.ghost:hover {
+      text-decoration: underline;
+    }
+
+    .hero-image {
+      flex: 1;
+      max-width: 500px;
+      margin-top: 30px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+<body>
+    
+    <div id="navbar-placeholder"></div>
+
+  <!-- 🔸 HERO SECTION ONLY -->
+  <section class="hero-section">
+    <!-- LEFT TEXT -->
+
+    <div class="hero-text">
+      <h1>Smarter Cervical Health for Every Woman</h1>
+      <p>
+        Early detection, personalized screening, and doctor-guided care —
+        all powered by AI. FemTrack AI puts women’s wellness first.
+      </p>
+      <div class="hero-buttons">
+        <a href="signup.html" class="btn primary">Sign Up as Patient</a>
+        <a href="signup_doctor.html" class="btn outline">Sign Up as Doctor</a>
+        <a href="login.html" class="btn ghost">Login</a>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image">
+      <img src="a_digital_illustration_of_an_african_or.jpeg" alt="FemTech Illustration" />
+      <script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+    </div>
+  </section>
+
+</body>
+</html>
